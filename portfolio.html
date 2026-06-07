@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Sakthivel K — Digital Marketing Executive</title>
+<link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Cabinet+Grotesk:wght@300;400;500;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#080810;
+  --bg2:#0D0D18;
+  --surface:#11111E;
+  --card:#161625;
+  --card2:#1C1C2E;
+  --border:#252538;
+  --border2:#2E2E48;
+  --accent:#E8590C;
+  --accent-soft:rgba(232,89,12,0.12);
+  --accent-mid:rgba(232,89,12,0.25);
+  --gold:#C9A84C;
+  --gold-soft:rgba(201,168,76,0.12);
+  --blue:#4F8EF7;
+  --blue-soft:rgba(79,142,247,0.12);
+  --green:#2ECC8F;
+  --green-soft:rgba(46,204,143,0.12);
+  --purple:#9B72F7;
+  --purple-soft:rgba(155,114,247,0.12);
+  --text:#EEEAF4;
+  --text2:#A8A4BC;
+  --text3:#5E5A72;
+  --font-display:'Clash Display',sans-serif;
+  --font-body:'Cabinet Grotesk',sans-serif;
+  --r-sm:8px;
+  --r-md:14px;
+  --r-lg:20px;
+  --r-xl:28px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:16px;line-height:1.7;overflow-x:hidden}
+::selection{background:var(--accent);color:#fff}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--accent);border-radius:4px}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 3rem;height:64px;display:flex;justify-content:space-between;align-items:center;background:rgba(8,8,16,0.8);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:var(--font-display);font-size:1.15rem;font-weight:700;letter-spacing:0.05em;color:var(--text)}
+.nav-logo em{color:var(--accent);font-style:normal}
+.nav-links{display:flex;gap:0;list-style:none}
+.nav-links a{color:var(--text3);text-decoration:none;font-size:0.8rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:2rem;transition:color 0.2s,background 0.2s}
+.nav-links a:hover{color:var(--text);background:var(--surface)}
+.nav-right{display:flex;gap:0.75rem;align-items:center}
+.nav-btn{font-size:0.8rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:0.45rem 1.25rem;border-radius:2rem;text-decoration:none;transition:opacity 0.2s,transform 0.15s;display:inline-flex;align-items:center;gap:0.4rem}
+.nav-btn:hover{opacity:0.85;transform:translateY(-1px)}
+.nav-btn.outline{border:1px solid var(--border2);color:var(--text2)}
+.nav-btn.filled{background:var(--accent);color:#fff}
+
+/* ── HERO ── */
+#hero{min-height:100vh;display:flex;align-items:center;padding:80px 3rem 4rem;position:relative;overflow:hidden}
+.hero-noise{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");opacity:0.5;pointer-events:none}
+.hero-orb{position:absolute;border-radius:50%;pointer-events:none;filter:blur(80px)}
+.hero-orb1{width:500px;height:500px;background:rgba(232,89,12,0.08);top:-100px;right:5%}
+.hero-orb2{width:400px;height:400px;background:rgba(79,142,247,0.06);bottom:-100px;left:10%}
+.hero-inner{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 400px;gap:5rem;align-items:center;position:relative}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:0.6rem;margin-bottom:1.75rem}
+.eyebrow-dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:blink 2.5s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+.eyebrow-text{font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--green)}
+.hero-name{font-family:var(--font-display);font-size:clamp(3.2rem,5.5vw,5.8rem);font-weight:700;line-height:0.95;letter-spacing:-0.02em;margin-bottom:0.75rem}
+.hero-name .accent{color:var(--accent);display:block}
+.hero-title{font-size:1.05rem;color:var(--text2);font-weight:400;margin-bottom:1.75rem;line-height:1.6}
+.hero-title strong{color:var(--text);font-weight:700}
+.hero-desc{font-size:1rem;color:var(--text2);line-height:1.85;margin-bottom:2.5rem;max-width:520px}
+.hero-actions{display:flex;gap:0.875rem;flex-wrap:wrap;margin-bottom:2.75rem}
+.btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.75rem;border-radius:2rem;font-family:var(--font-body);font-size:0.875rem;font-weight:700;text-decoration:none;letter-spacing:0.03em;transition:transform 0.2s,opacity 0.2s,box-shadow 0.2s;cursor:pointer;border:none}
+.btn:hover{transform:translateY(-2px)}
+.btn-accent{background:var(--accent);color:#fff;box-shadow:0 4px 24px rgba(232,89,12,0.3)}
+.btn-accent:hover{box-shadow:0 8px 32px rgba(232,89,12,0.4)}
+.btn-ghost{background:var(--card2);color:var(--text);border:1px solid var(--border2)}
+.btn-ghost:hover{border-color:var(--accent);background:var(--accent-soft)}
+.btn-linkedin{background:#0A66C2;color:#fff}
+.hero-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:var(--r-md);overflow:hidden}
+.kpi{background:var(--card);padding:1.25rem 1rem;text-align:center}
+.kpi-val{font-family:var(--font-display);font-size:1.8rem;font-weight:700;color:var(--text);line-height:1}
+.kpi-val em{color:var(--accent);font-style:normal}
+.kpi-label{font-size:0.72rem;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em;margin-top:0.3rem}
+
+/* PHOTO CARD */
+.photo-card{background:var(--card);border:1px solid var(--border2);border-radius:var(--r-xl);overflow:hidden;position:relative;aspect-ratio:3/4;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.photo-inner{width:100%;height:100%;position:relative}
+.photo-img{width:100%;height:100%;object-fit:cover;display:none}
+.photo-img.loaded{display:block}
+.photo-ph{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:1rem;padding:2rem}
+.ph-circle{width:80px;height:80px;border-radius:50%;background:var(--card2);border:2px dashed var(--border2);display:flex;align-items:center;justify-content:center;font-size:2rem}
+.ph-label{font-size:0.85rem;color:var(--text3);text-align:center}
+.ph-upload-btn{background:var(--accent-soft);border:1px solid var(--accent-mid);color:var(--accent);padding:0.5rem 1.25rem;border-radius:2rem;font-size:0.78rem;font-weight:700;cursor:pointer;letter-spacing:0.04em;transition:background 0.2s}
+.ph-upload-btn:hover{background:var(--accent-mid)}
+.photo-badge{position:absolute;bottom:1.25rem;left:50%;transform:translateX(-50%);background:rgba(8,8,16,0.85);backdrop-filter:blur(8px);border:1px solid var(--border2);color:var(--text2);padding:0.5rem 1.25rem;border-radius:2rem;font-size:0.75rem;font-weight:500;white-space:nowrap;letter-spacing:0.04em}
+.photo-badge span{color:var(--green);margin-right:0.4rem}
+.photo-deco{position:absolute;pointer-events:none}
+.deco-tl{top:-1px;left:-1px;width:40px;height:40px;border-top:2px solid var(--accent);border-left:2px solid var(--accent);border-radius:var(--r-xl) 0 0 0}
+.deco-br{bottom:-1px;right:-1px;width:40px;height:40px;border-bottom:2px solid var(--accent);border-right:2px solid var(--accent);border-radius:0 0 var(--r-xl) 0}
+
+/* ── SECTIONS ── */
+section{padding:6rem 3rem}
+.container{max-width:1200px;margin:0 auto}
+.sec-label{display:inline-flex;align-items:center;gap:0.75rem;font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:0.875rem}
+.sec-label::before{content:'';width:28px;height:2px;background:var(--accent);border-radius:2px}
+.sec-title{font-family:var(--font-display);font-size:clamp(2rem,3.5vw,2.8rem);font-weight:700;letter-spacing:-0.02em;line-height:1.1;margin-bottom:0.75rem}
+.sec-sub{color:var(--text2);font-size:0.975rem;max-width:560px;line-height:1.8}
+
+/* ── ABOUT ── */
+#about{background:var(--bg2)}
+.about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:5rem;align-items:start}
+.about-body p{color:var(--text2);line-height:1.85;margin-bottom:1.1rem;font-size:0.975rem}
+.about-body p strong{color:var(--text);font-weight:700}
+.about-highlights{display:grid;grid-template-columns:1fr 1fr;gap:0.875rem;margin-top:2rem}
+.hl-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-md);padding:1.25rem;transition:border-color 0.25s,transform 0.25s}
+.hl-card:hover{border-color:var(--accent);transform:translateY(-3px)}
+.hl-icon{font-size:1.4rem;margin-bottom:0.5rem}
+.hl-title{font-size:0.875rem;font-weight:700;color:var(--text);margin-bottom:0.2rem}
+.hl-body{font-size:0.8rem;color:var(--text3);line-height:1.5}
+.about-edu{background:var(--card);border:1px solid var(--border2);border-radius:var(--r-lg);padding:1.75rem;margin-top:0}
+.edu-title{font-family:var(--font-display);font-size:0.95rem;font-weight:600;margin-bottom:1.25rem;color:var(--text2);letter-spacing:0.04em;text-transform:uppercase;font-size:0.72rem}
+.edu-item{display:flex;gap:1rem;align-items:flex-start;padding:1rem 0;border-bottom:1px solid var(--border)}
+.edu-item:last-child{border-bottom:none;padding-bottom:0}
+.edu-icon{width:38px;height:38px;border-radius:var(--r-sm);background:var(--accent-soft);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.edu-info h4{font-size:0.9rem;font-weight:700;color:var(--text);line-height:1.3}
+.edu-info p{font-size:0.8rem;color:var(--text3);margin-top:0.2rem}
+.edu-badge{display:inline-block;background:var(--green-soft);color:var(--green);font-size:0.7rem;font-weight:700;padding:0.2rem 0.6rem;border-radius:2rem;margin-top:0.35rem;letter-spacing:0.04em}
+
+/* ── SKILLS ── */
+#skills{background:var(--bg)}
+.skills-layout{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.skill-block{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.5rem;transition:border-color 0.25s,transform 0.25s}
+.skill-block:hover{border-color:var(--border2);transform:translateY(-4px)}
+.sb-head{display:flex;align-items:center;gap:0.875rem;margin-bottom:1.25rem}
+.sb-icon{width:42px;height:42px;border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;font-size:1.15rem;flex-shrink:0}
+.sb-icon.orange{background:var(--accent-soft)}
+.sb-icon.blue{background:var(--blue-soft)}
+.sb-icon.green{background:var(--green-soft)}
+.sb-icon.purple{background:var(--purple-soft)}
+.sb-icon.gold{background:var(--gold-soft)}
+.sb-title{font-size:0.9rem;font-weight:700;color:var(--text)}
+.sb-subtitle{font-size:0.72rem;color:var(--text3);margin-top:0.1rem}
+.tags{display:flex;flex-wrap:wrap;gap:0.4rem}
+.tag{background:rgba(255,255,255,0.04);border:1px solid var(--border);color:var(--text2);padding:0.28rem 0.7rem;border-radius:2rem;font-size:0.76rem;font-weight:500;transition:border-color 0.2s,color 0.2s}
+.tag:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ── EXPERIENCE ── */
+#experience{background:var(--bg2)}
+.exp-layout{display:grid;grid-template-columns:260px 1fr;gap:0;position:relative}
+.exp-tabs{display:flex;flex-direction:column;gap:0;position:sticky;top:80px;align-self:start;border-right:1px solid var(--border);padding-right:0}
+.exp-tab{padding:1rem 1.5rem 1rem 0;cursor:pointer;border-right:2px solid transparent;margin-right:-1px;transition:border-color 0.2s}
+.exp-tab.active{border-right-color:var(--accent)}
+.exp-tab-title{font-size:0.875rem;font-weight:700;color:var(--text3);transition:color 0.2s;line-height:1.3}
+.exp-tab.active .exp-tab-title{color:var(--text)}
+.exp-tab-company{font-size:0.75rem;color:var(--text3);margin-top:0.2rem}
+.exp-tab:hover .exp-tab-title{color:var(--text2)}
+.exp-panels{padding-left:3rem}
+.exp-panel{display:none}
+.exp-panel.active{display:block}
+.ep-header{margin-bottom:1.5rem}
+.ep-role{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--text);margin-bottom:0.35rem}
+.ep-meta{display:flex;flex-wrap:wrap;gap:0.6rem;align-items:center}
+.ep-badge{display:inline-flex;align-items:center;gap:0.35rem;font-size:0.75rem;font-weight:600;padding:0.28rem 0.75rem;border-radius:2rem}
+.ep-badge.company{background:var(--accent-soft);color:var(--accent);border:1px solid var(--accent-mid)}
+.ep-badge.date{background:var(--card2);color:var(--text3);border:1px solid var(--border)}
+.ep-badge.location{background:var(--card2);color:var(--text3);border:1px solid var(--border)}
+.ep-badge.type{background:var(--green-soft);color:var(--green);border:1px solid rgba(46,204,143,0.2)}
+
+/* ── FIX: bullet list — remove grid, use flex so strong tags wrap inline correctly ── */
+.ep-bullets{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:0.85rem;
+  margin-bottom:1.75rem;
+  padding:0;
+}
+.ep-bullets li{
+  display:block;
+  position:relative;
+  padding-left:1.4rem;
+  font-size:0.9rem;
+  color:var(--text2);
+  line-height:1.8;
+}
+.ep-bullets li::before{
+  content:'▸';
+  color:var(--accent);
+  font-size:0.75rem;
+  position:absolute;
+  left:0;
+  top:0.28rem;
+}
+.ep-bullets li strong{
+  color:var(--text);
+  font-weight:700;
+}
+
+.ep-metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:0.875rem}
+.ep-metric{background:var(--card);border:1px solid var(--border);border-radius:var(--r-md);padding:1rem;text-align:center}
+.ep-metric-val{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--accent)}
+.ep-metric-lbl{font-size:0.7rem;color:var(--text3);text-transform:uppercase;letter-spacing:0.07em;margin-top:0.2rem}
+
+/* ── PROJECTS (CASE STUDIES) ── */
+#projects{background:var(--bg)}
+.cases-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.case-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;transition:border-color 0.3s,transform 0.3s}
+.case-card:hover{border-color:var(--accent);transform:translateY(-5px)}
+.case-card.featured{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:0}
+.case-head{padding:2rem;border-bottom:1px solid var(--border)}
+.case-card.featured .case-head{border-bottom:none;border-right:1px solid var(--border)}
+.case-num{font-family:var(--font-display);font-size:0.72rem;font-weight:700;letter-spacing:0.12em;color:var(--accent);text-transform:uppercase;margin-bottom:0.5rem}
+.case-title{font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:0.5rem;line-height:1.3}
+.case-client{font-size:0.8rem;color:var(--text3);margin-bottom:1rem;font-style:italic}
+.case-tags{display:flex;flex-wrap:wrap;gap:0.35rem}
+.case-tag{font-size:0.7rem;background:var(--accent-soft);color:var(--accent);border:1px solid var(--accent-mid);padding:0.2rem 0.6rem;border-radius:2rem;font-weight:600}
+.case-body{padding:2rem}
+.case-section{margin-bottom:1.25rem}
+.cs-label{font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:0.4rem}
+.cs-text{font-size:0.875rem;color:var(--text2);line-height:1.7}
+.case-results{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;margin-top:1.25rem}
+.case-card:not(.featured) .case-results{grid-template-columns:repeat(2,1fr)}
+.cr-item{background:var(--bg);border-radius:var(--r-sm);padding:0.875rem;text-align:center}
+.cr-val{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--accent)}
+.cr-lbl{font-size:0.65rem;color:var(--text3);text-transform:uppercase;letter-spacing:0.07em;margin-top:0.15rem}
+
+/* ── CERTIFICATIONS ── */
+#certifications{background:var(--bg2)}
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.cert-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.5rem;display:flex;flex-direction:column;gap:0.75rem;transition:border-color 0.25s,transform 0.25s;cursor:default}
+.cert-card:hover{border-color:var(--gold);transform:translateY(-3px)}
+.cert-logo{width:44px;height:44px;border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;font-size:1.3rem}
+.cert-logo.google{background:#FFF3E0;color:#DB4437}
+.cert-logo.meta{background:#E8F0FE;color:#0866FF}
+.cert-logo.hubspot{background:#FFF0EB;color:#FF5C35}
+.cert-logo.semrush{background:#E8FFE8;color:#1A7550}
+.cert-logo.dm{background:var(--purple-soft);color:var(--purple)}
+.cert-logo.ga{background:var(--gold-soft);color:var(--gold)}
+.cert-name{font-size:0.875rem;font-weight:700;color:var(--text);line-height:1.35}
+.cert-issuer{font-size:0.75rem;color:var(--text3)}
+.cert-status{display:inline-flex;align-items:center;gap:0.3rem;font-size:0.7rem;font-weight:700;padding:0.2rem 0.65rem;border-radius:2rem}
+.cert-status.earned{background:var(--green-soft);color:var(--green);border:1px solid rgba(46,204,143,0.2)}
+.cert-status.inprogress{background:var(--gold-soft);color:var(--gold);border:1px solid rgba(201,168,76,0.2)}
+
+/* ── CONTACT ── */
+#contact{background:var(--bg)}
+.contact-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.contact-info h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;letter-spacing:-0.02em;line-height:1.15;margin-bottom:1rem}
+.contact-info p{color:var(--text2);line-height:1.85;margin-bottom:2rem;font-size:0.975rem}
+.contact-links{display:flex;flex-direction:column;gap:0.75rem}
+.c-link{display:flex;align-items:center;gap:1rem;padding:1rem 1.25rem;background:var(--card);border:1px solid var(--border);border-radius:var(--r-md);text-decoration:none;transition:border-color 0.2s,background 0.2s}
+.c-link:hover{border-color:var(--accent);background:var(--accent-soft)}
+.c-icon{width:42px;height:42px;border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.c-icon.mail{background:var(--accent-soft)}
+.c-icon.phone{background:var(--green-soft)}
+.c-icon.li{background:var(--blue-soft)}
+.c-icon.loc{background:var(--purple-soft)}
+.c-text strong{display:block;font-size:0.875rem;font-weight:700;color:var(--text)}
+.c-text span{font-size:0.8rem;color:var(--text3)}
+.contact-form{background:var(--card);border:1px solid var(--border);border-radius:var(--r-xl);padding:2.25rem}
+.cf-title{font-family:var(--font-display);font-size:1.1rem;font-weight:700;margin-bottom:1.75rem;color:var(--text)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fgroup{margin-bottom:1.1rem}
+.fgroup label{display:block;font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text3);margin-bottom:0.4rem}
+.fgroup input,.fgroup textarea,.fgroup select{width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:0.75rem 1rem;border-radius:var(--r-sm);font-family:var(--font-body);font-size:0.875rem;outline:none;transition:border-color 0.2s;resize:none}
+.fgroup input:focus,.fgroup textarea:focus,.fgroup select:focus{border-color:var(--accent)}
+.fgroup textarea{height:110px}
+.fgroup select option{background:var(--bg2)}
+.form-submit{width:100%;background:var(--accent);color:#fff;border:none;padding:0.95rem;border-radius:2rem;font-family:var(--font-display);font-size:1rem;font-weight:700;cursor:pointer;transition:opacity 0.2s,transform 0.2s;letter-spacing:0.03em;margin-top:0.5rem}
+.form-submit:hover{opacity:0.88;transform:translateY(-2px)}
+.form-note{font-size:0.75rem;color:var(--text3);text-align:center;margin-top:0.75rem}
+
+/* ── FOOTER ── */
+footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-brand{font-family:var(--font-display);font-weight:700;font-size:0.9rem;color:var(--text3)}
+.footer-brand em{color:var(--accent);font-style:normal}
+.footer-copy{font-size:0.78rem;color:var(--text3)}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{font-size:0.78rem;color:var(--text3);text-decoration:none;transition:color 0.2s}
+.footer-links a:hover{color:var(--accent)}
+
+/* ── ANIMATIONS ── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.65s ease,transform 0.65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:0.1s}
+.reveal-delay-2{transition-delay:0.2s}
+.reveal-delay-3{transition-delay:0.3s}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .hero-inner,.about-grid,.contact-wrapper{grid-template-columns:1fr}
+  .hero-photo-wrap{order:-1;max-width:260px;margin:0 auto}
+  .cases-grid,.case-card.featured{grid-template-columns:1fr}
+  .case-card.featured{display:block}
+  .case-card.featured .case-head{border-right:none;border-bottom:1px solid var(--border)}
+  .skills-layout{grid-template-columns:1fr}
+  .exp-layout{grid-template-columns:1fr}
+  .exp-tabs{flex-direction:row;flex-wrap:wrap;border-right:none;border-bottom:1px solid var(--border);padding-right:0;padding-bottom:1rem;gap:0.5rem;position:static}
+  .exp-tab{border-right:none;border-bottom:2px solid transparent;margin-right:0;margin-bottom:-1px;padding:0.5rem 1rem}
+  .exp-tab.active{border-bottom-color:var(--accent)}
+  .exp-panels{padding-left:0;padding-top:2rem}
+  nav{padding:0 1.25rem}
+  .nav-links{display:none}
+  section{padding:4rem 1.25rem}
+  #hero{padding:80px 1.25rem 3rem}
+  footer{padding:1.5rem 1.25rem}
+}
+@media(max-width:600px){
+  .form-row{grid-template-columns:1fr}
+  .case-results{grid-template-columns:repeat(2,1fr) !important}
+  .hero-kpis{grid-template-columns:1fr 1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-logo">SK<em>.</em></div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="https://www.linkedin.com/in/sakthivel-k-0910pa13" target="_blank" class="nav-btn outline">LinkedIn ↗</a>
+    <a href="#" onclick="downloadResume()" class="nav-btn filled">⬇ Resume</a>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-noise"></div>
+  <div class="hero-orb hero-orb1"></div>
+  <div class="hero-orb hero-orb2"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal">
+        <span class="eyebrow-dot"></span>
+        <span class="eyebrow-text">Open to Work · Remote · On-site · Anywhere</span>
+      </div>
+      <h1 class="hero-name reveal reveal-delay-1">Sakthivel<span class="accent">K.</span></h1>
+      <p class="hero-title reveal reveal-delay-2"><strong>Digital Marketing Executive</strong> — SEO · Meta Ads · Content · GBP</p>
+      <p class="hero-desc reveal reveal-delay-2">B.Tech IT graduate with proven experience driving organic growth, generating paid leads, and optimising local search presence for real clients across India. I turn strategy into measurable results.</p>
+      <div class="hero-actions reveal reveal-delay-3">
+        <a href="#contact" class="btn btn-accent">Hire Me →</a>
+        <a href="https://www.linkedin.com/in/sakthivel-k-0910pa13" target="_blank" class="btn btn-linkedin">in LinkedIn</a>
+        <a href="#" onclick="downloadResume()" class="btn btn-ghost">⬇ Download Resume</a>
+      </div>
+      <div class="hero-kpis reveal reveal-delay-3">
+        <div class="kpi"><div class="kpi-val"><em>58</em></div><div class="kpi-label">Leads via Meta Ads</div></div>
+        <div class="kpi"><div class="kpi-val"><em>40%</em></div><div class="kpi-label">Crawl Errors Reduced</div></div>
+        <div class="kpi"><div class="kpi-val"><em>35%</em></div><div class="kpi-label">Organic Traffic ↑</div></div>
+      </div>
+    </div>
+    <div class="hero-photo-wrap reveal reveal-delay-2">
+      <div class="photo-card">
+        <div class="photo-inner">
+          <img src="sakthivel_photo.jpg" alt="Sakthivel K" id="profileImg" class="photo-img loaded" onerror="this.style.display='none';document.getElementById('photoPh').style.display='flex'"/>
+          <div class="photo-ph" id="photoPh" style="display:none">
+            <div class="ph-circle">👤</div>
+            <p class="ph-label" style="font-size:0.8rem;color:var(--text2);text-align:center;line-height:1.5">Place your photo file named<br><strong style="color:var(--accent)">sakthivel_photo.jpg</strong><br>in the same folder as this HTML file</p>
+          </div>
+        </div>
+        <div class="photo-badge"><span>●</span> Open to Work · Anywhere</div>
+        <div class="photo-deco deco-tl"></div>
+        <div class="photo-deco deco-br"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="sec-label">About Me</div>
+        <h2 class="sec-title">Turning Digital Visibility<br>Into Real Growth</h2>
+        <div class="about-body" style="margin-top:1.5rem">
+          <p>I'm a <strong>Digital Marketing Executive</strong> with a B.Tech in Information Technology and hands-on experience executing SEO strategies, running Meta advertising campaigns, and managing Google Business Profiles for real clients across diverse industries.</p>
+          <p>From <strong>reducing a client's crawl errors by 40%</strong> through Technical SEO to generating <strong>20 qualified leads for a makeover artist</strong> through precisely targeted Meta Ads — my work is always tied to outcomes that matter to clients.</p>
+          <p>I combine data-driven thinking with creative execution: whether that's crafting SEO-optimised blog content, designing Canva creatives for social posts, or building a local SEO strategy from the ground up for a small business.</p>
+        </div>
+        <div class="about-highlights">
+          <div class="hl-card reveal reveal-delay-1">
+            <div class="hl-icon">🎯</div>
+            <div class="hl-title">Results-Driven</div>
+            <div class="hl-body">Every campaign and strategy tied to measurable KPIs — leads, rankings, traffic, and engagement.</div>
+          </div>
+          <div class="hl-card reveal reveal-delay-2">
+            <div class="hl-icon">⚡</div>
+            <div class="hl-title">Fast Learner</div>
+            <div class="hl-body">Rapidly mastered Ahrefs, GSC, Meta Ads Manager, and GBP during live client projects.</div>
+          </div>
+          <div class="hl-card reveal reveal-delay-1">
+            <div class="hl-icon">🌐</div>
+            <div class="hl-title">Location Flexible</div>
+            <div class="hl-body">Open to remote, on-site, and relocation opportunities anywhere in India or internationally.</div>
+          </div>
+          <div class="hl-card reveal reveal-delay-2">
+            <div class="hl-icon">✍️</div>
+            <div class="hl-title">Creative Marketer</div>
+            <div class="hl-body">Canva design, reel concepts, blog writing, and social content — creativity backed by SEO logic.</div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div class="about-edu">
+          <div class="edu-title">Education</div>
+          <div class="edu-item">
+            <div class="edu-icon">🎓</div>
+            <div class="edu-info">
+              <h4>B.Tech — Information Technology</h4>
+              <p>Karpagam College of Engineering, Coimbatore</p>
+              <p style="font-size:0.78rem;color:var(--text3);margin-top:0.1rem">GPA: 7.57 / 10.00</p>
+              <span class="edu-badge">✓ Completed 2026</span>
+            </div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-icon">📘</div>
+            <div class="edu-info">
+              <h4>Higher Secondary (HSC)</h4>
+              <p>New Power Matric Hr Sec School</p>
+              <p style="font-size:0.78rem;color:var(--text3);margin-top:0.1rem">Score: 87%  ·  2022</p>
+            </div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-icon">📗</div>
+            <div class="edu-info">
+              <h4>SSLC</h4>
+              <p>New Power Matric Hr Sec School</p>
+              <p style="font-size:0.78rem;color:var(--text3);margin-top:0.1rem">Score: 81%  ·  2020</p>
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.5rem;margin-top:1.25rem">
+          <div class="edu-title" style="margin-bottom:1rem">Location & Availability</div>
+          <div style="display:flex;flex-direction:column;gap:0.6rem">
+            <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.875rem;color:var(--text2)">📍 <span>Coimbatore, Tamil Nadu, India</span></div>
+            <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.875rem;color:var(--text2)">💻 <span>Open to <strong style="color:var(--text)">Remote</strong> · <strong style="color:var(--text)">On-site</strong> · Freelance · Full-time</span></div>
+            <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.875rem;color:var(--text2)">✈️ <span><strong style="color:var(--text)">Willing to relocate anywhere</strong> — India or internationally</span></div>
+            <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.875rem;color:var(--text2)">🕐 <span>IST (UTC+5:30) · Flexible hours</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SKILLS ── -->
+<section id="skills">
+  <div class="container">
+    <div style="text-align:center;max-width:560px;margin:0 auto 3.5rem" class="reveal">
+      <div class="sec-label" style="justify-content:center">Capabilities</div>
+      <h2 class="sec-title">Skills & Expertise</h2>
+      <p class="sec-sub" style="margin:0 auto">A full-stack digital marketing toolkit — from technical SEO audits to paid ad campaigns and content creation.</p>
+    </div>
+    <div class="skills-layout">
+      <div class="skill-block reveal">
+        <div class="sb-head"><div class="sb-icon orange">🔍</div><div><div class="sb-title">Search Engine Optimization</div><div class="sb-subtitle">Organic growth & rankings</div></div></div>
+        <div class="tags"><span class="tag">Technical SEO</span><span class="tag">On-Page SEO</span><span class="tag">Off-Page SEO</span><span class="tag">Local SEO</span><span class="tag">Schema Markup</span><span class="tag">Canonical Tags</span><span class="tag">Keyword Research</span><span class="tag">Competitor Analysis</span><span class="tag">Backlink Analysis</span><span class="tag">Crawl Audit</span></div>
+      </div>
+      <div class="skill-block reveal reveal-delay-1">
+        <div class="sb-head"><div class="sb-icon blue">📣</div><div><div class="sb-title">Paid Advertising</div><div class="sb-subtitle">Meta Ads & lead generation</div></div></div>
+        <div class="tags"><span class="tag">Meta Ads (Facebook & Instagram)</span><span class="tag">Lead Generation Campaigns</span><span class="tag">Audience Targeting</span><span class="tag">Ad Creative</span><span class="tag">Campaign Optimisation</span><span class="tag">Conversion Tracking</span></div>
+      </div>
+      <div class="skill-block reveal reveal-delay-2">
+        <div class="sb-head"><div class="sb-icon green">📍</div><div><div class="sb-title">Local & GBP Marketing</div><div class="sb-subtitle">Google Business Profile</div></div></div>
+        <div class="tags"><span class="tag">GBP Creation & Setup</span><span class="tag">GBP Management</span><span class="tag">Google Posts</span><span class="tag">Local SEO</span><span class="tag">Maps Optimisation</span><span class="tag">Review Management</span></div>
+      </div>
+      <div class="skill-block reveal">
+        <div class="sb-head"><div class="sb-icon purple">✍️</div><div><div class="sb-title">Content & Social Media</div><div class="sb-subtitle">Content creation & distribution</div></div></div>
+        <div class="tags"><span class="tag">Content Writing</span><span class="tag">SEO Blog Writing</span><span class="tag">Social Media Marketing</span><span class="tag">Reel Creation</span><span class="tag">Poster Design</span><span class="tag">YouTube Marketing</span><span class="tag">Canva</span></div>
+      </div>
+      <div class="skill-block reveal reveal-delay-1">
+        <div class="sb-head"><div class="sb-icon gold">📊</div><div><div class="sb-title">Analytics & Tools</div><div class="sb-subtitle">Data-driven decisions</div></div></div>
+        <div class="tags"><span class="tag">Google Analytics 4</span><span class="tag">Google Search Console</span><span class="tag">Ahrefs</span><span class="tag">Google Keyword Planner</span><span class="tag">Meta Ads Manager</span><span class="tag">WordPress</span></div>
+      </div>
+      <div class="skill-block reveal reveal-delay-2">
+        <div class="sb-head"><div class="sb-icon orange">💡</div><div><div class="sb-title">Professional Skills</div><div class="sb-subtitle">Soft skills & work style</div></div></div>
+        <div class="tags"><span class="tag">Communication</span><span class="tag">Creativity</span><span class="tag">Problem Solving</span><span class="tag">Project Management</span><span class="tag">Client Reporting</span><span class="tag">Remote Collaboration</span><span class="tag">Time Management</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EXPERIENCE ── -->
+<section id="experience">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:3.5rem">
+      <div class="sec-label">Work History</div>
+      <h2 class="sec-title">Professional Experience</h2>
+      <p class="sec-sub">Internship, freelance projects, and client campaigns with real, trackable results.</p>
+    </div>
+    <div class="exp-layout">
+      <div class="exp-tabs">
+        <div class="exp-tab active" onclick="showPanel('mount',this)">
+          <div class="exp-tab-title">Mount Valley School</div>
+          <div class="exp-tab-company">SEO Specialist · 2025</div>
+        </div>
+        <div class="exp-tab" onclick="showPanel('tulasi',this)">
+          <div class="exp-tab-title">Tulasi Tiles</div>
+          <div class="exp-tab-company">SEO Specialist · 2025</div>
+        </div>
+        <div class="exp-tab" onclick="showPanel('meta',this)">
+          <div class="exp-tab-title">Meta Ads Campaigns</div>
+          <div class="exp-tab-company">Freelance · 2 Clients</div>
+        </div>
+        <div class="exp-tab" onclick="showPanel('gbp',this)">
+          <div class="exp-tab-title">Google Business Profile</div>
+          <div class="exp-tab-company">Multi-client · 2025</div>
+        </div>
+      </div>
+      <div class="exp-panels">
+        <!-- Mount Valley -->
+        <div class="exp-panel active" id="panel-mount">
+          <div class="ep-header">
+            <div class="ep-role">SEO Specialist</div>
+            <div class="ep-meta">
+              <span class="ep-badge company">Mount Valley School, Tirupur</span>
+              <span class="ep-badge date">📅 Aug – Oct 2025</span>
+              <span class="ep-badge location">🌐 Remote · Freelance</span>
+              <span class="ep-badge type">✓ Completed</span>
+            </div>
+          </div>
+          <ul class="ep-bullets">
+            <li>Conducted a full Technical SEO audit of mountvalleyschool.com, identifying and resolving crawl errors, broken links, and duplicate meta tags — <strong>reducing crawl errors by 40%</strong> and improving indexation speed.</li>
+            <li>Executed comprehensive On-Page SEO: rewrote title tags, meta descriptions, H1/H2 structure, and image alt text, <strong>improving page relevance scores</strong> for 15+ targeted keywords.</li>
+            <li>Implemented JSON-LD schema markup (Organisation, LocalBusiness) and submitted an updated XML sitemap, <strong>accelerating full site re-indexation</strong> within 3 weeks.</li>
+            <li>Built Off-Page authority through strategic guest posting on education niche sites and manual directory submissions, acquiring <strong>12+ quality backlinks</strong> in 3 months.</li>
+            <li>Performed in-depth keyword research and competitor gap analysis, identifying 25+ high-value keyword opportunities aligned with the school's admissions funnel.</li>
+            <li>Monitored weekly performance via Google Search Console and Analytics, delivering monthly reports with actionable insights to the school management team.</li>
+          </ul>
+          <div class="ep-metrics">
+            <div class="ep-metric"><div class="ep-metric-val">40%</div><div class="ep-metric-lbl">Crawl Errors ↓</div></div>
+            <div class="ep-metric"><div class="ep-metric-val">12+</div><div class="ep-metric-lbl">Backlinks Built</div></div>
+            <div class="ep-metric"><div class="ep-metric-val">25+</div><div class="ep-metric-lbl">Keywords Targeted</div></div>
+          </div>
+        </div>
+        <!-- Tulasi Tiles -->
+        <div class="exp-panel" id="panel-tulasi">
+          <div class="ep-header">
+            <div class="ep-role">SEO Specialist</div>
+            <div class="ep-meta">
+              <span class="ep-badge company">Tulasi Tiles, Tirupur · Palette Production</span>
+              <span class="ep-badge date">📅 2025</span>
+              <span class="ep-badge location">🌐 Remote · Freelance · tulasitiles.com</span>
+              <span class="ep-badge type">✓ Completed</span>
+            </div>
+          </div>
+          <ul class="ep-bullets">
+            <li>Conducted a comprehensive Technical SEO audit, identifying and resolving crawl issues, broken links, duplicate content, and indexing errors to improve website performance and search visibility.</li>
+            <li>Executed On-Page SEO optimisation including title tags, meta descriptions, heading structure (H1/H2), image alt attributes, and internal linking to improve keyword relevance and user experience.</li>
+            <li>Performed keyword research and competitor analysis, identifying high-intent search terms related to tiles, flooring, and interior solutions to target potential customers.</li>
+            <li>Implemented structured data (Schema Markup) and submitted updated XML sitemaps through Google Search Console, improving crawl efficiency and indexation speed.</li>
+            <li>Built Off-Page SEO through directory submissions, citation building, and quality backlink acquisition to strengthen domain authority.</li>
+            <li>Managed and optimised Google Business Profile, publishing regular posts, updating business information, and improving local search visibility on Google Maps.</li>
+          </ul>
+          <div class="ep-metrics">
+            <div class="ep-metric"><div class="ep-metric-val">Tech</div><div class="ep-metric-lbl">SEO Audit ✓</div></div>
+            <div class="ep-metric"><div class="ep-metric-val">GBP</div><div class="ep-metric-lbl">Optimised ✓</div></div>
+            <div class="ep-metric"><div class="ep-metric-val">Schema</div><div class="ep-metric-lbl">Implemented ✓</div></div>
+          </div>
+        </div>
+
+        <!-- Meta Ads -->
+        <div class="exp-panel" id="panel-meta">
+          <div class="ep-header">
+            <div class="ep-role">Meta Ads Specialist</div>
+            <div class="ep-meta">
+              <span class="ep-badge company">Freelance · 2 Clients</span>
+              <span class="ep-badge date">📅 2025</span>
+              <span class="ep-badge location">🌐 Remote</span>
+              <span class="ep-badge type">✓ Completed</span>
+            </div>
+          </div>
+          <ul class="ep-bullets">
+            <li><strong>Client 1 — Makeover Artist:</strong> Designed and launched 2 Meta lead generation ads targeting women aged 18–40 in the local area. Wrote ad copy, created Canva visuals, and set up a lead form — generating 20 qualified leads from a minimal ad budget.</li>
+            <li><strong>Client 2 — Thara Farm (Tea Powder):</strong> Built a 4-ad Meta campaign for a tea powder brand targeting home buyers and health-conscious consumers. Managed audience segmentation, creative testing, and budget allocation — achieving 38 results including product enquiries and purchase actions.</li>
+            <li>Performed audience research and interest-based targeting using Meta Ads Manager, creating custom and lookalike audiences for improved reach and lower cost-per-result.</li>
+            <li>A/B tested ad creatives (image vs. carousel) and ad copy variations to identify the best-performing combinations, optimising mid-campaign for maximum ROI.</li>
+            <li>Delivered post-campaign reports to both clients covering reach, impressions, CTR, cost-per-lead, and recommendations for future campaigns.</li>
+          </ul>
+          <div class="ep-metrics">
+            <div class="ep-metric"><div class="ep-metric-val">58</div><div class="ep-metric-lbl">Total Leads</div></div>
+            <div class="ep-metric"><div class="ep-metric-val">6</div><div class="ep-metric-lbl">Ads Launched</div></div>
+            <div class="ep-metric"><div class="ep-metric-val">2</div><div class="ep-metric-lbl">Clients Served</div></div>
+          </div>
+        </div>
+        <!-- GBP -->
+        <div class="exp-panel" id="panel-gbp">
+          <div class="ep-header">
+            <div class="ep-role">Google Business Profile Manager</div>
+            <div class="ep-meta">
+              <span class="ep-badge company">Multiple Local Clients</span>
+              <span class="ep-badge date">📅 2025</span>
+              <span class="ep-badge location">🌐 Remote · Freelance</span>
+              <span class="ep-badge type">✓ Completed</span>
+            </div>
+          </div>
+          <ul class="ep-bullets">
+            <li>Created Google Business Profiles from scratch for local businesses — including NAP setup (Name, Address, Phone), category selection, service listing, and business description writing optimised with local keywords.</li>
+            <li>Managed ongoing GBP profiles: published weekly Google Posts (offers, events, updates), added photos, responded to Q&amp;A, and maintained profile accuracy to improve local pack rankings.</li>
+            <li>Implemented Local SEO best practices including citation building, consistent NAP across directories, and geo-targeted keyword optimisation to improve visibility in Google Maps searches.</li>
+            <li>Monitored GBP Insights data (search queries, views, direction requests, call clicks) to refine content strategy and demonstrate measurable improvements in local visibility to clients.</li>
+            <li>Provided training and documentation to client teams on how to manage their GBP profiles independently post-handover.</li>
+          </ul>
+          <div class="ep-metrics">
+            <div class="ep-metric"><div class="ep-metric-val">Local</div><div class="ep-metric-lbl">Visibility ↑</div></div>
+            <div class="ep-metric"><div class="ep-metric-val">Maps</div><div class="ep-metric-lbl">Rankings ↑</div></div>
+            <div class="ep-metric"><div class="ep-metric-val">Full</div><div class="ep-metric-lbl">Profile Setup</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJECTS / CASE STUDIES ── -->
+<section id="projects">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:3.5rem">
+      <div class="sec-label">Portfolio</div>
+      <h2 class="sec-title">Project Case Studies</h2>
+      <p class="sec-sub">Real client work — problem, strategy, tools, and results.</p>
+    </div>
+    <div class="cases-grid">
+      <!-- Featured case -->
+      <div class="case-card featured reveal">
+        <div class="case-head">
+          <div class="case-num">Case Study 01 · Featured</div>
+          <div class="case-title">Full SEO Overhaul — Creva Solution</div>
+          <div class="case-client">Independent Freelance Project</div>
+          <div class="case-tags">
+            <span class="case-tag">Technical SEO</span>
+            <span class="case-tag">Schema Markup</span>
+            <span class="case-tag">Link Building</span>
+            <span class="case-tag">Content SEO</span>
+          </div>
+        </div>
+        <div class="case-body">
+          <div class="case-section">
+            <div class="cs-label">The Problem</div>
+            <div class="cs-text">Creva Solution was buried on page 6 of Google for their key search terms. The site had significant crawl errors, missing schema, weak backlink profile, and unoptimised on-page content — all preventing indexation and ranking.</div>
+          </div>
+          <div class="case-section">
+            <div class="cs-label">Strategy & Execution</div>
+            <div class="cs-text">Conducted a full technical audit, fixed crawl errors, implemented JSON-LD schema markup, rewrote meta tags and headings, then built a targeted backlink profile through guest posting and directory submissions.</div>
+          </div>
+          <div class="case-section">
+            <div class="cs-label">Tools Used</div>
+            <div class="cs-text">Google Search Console · Ahrefs · Google Keyword Planner · WordPress · JSON-LD Schema Generator</div>
+          </div>
+          <div class="case-results">
+            <div class="cr-item"><div class="cr-val">40%</div><div class="cr-lbl">Crawl Errors ↓</div></div>
+            <div class="cr-item"><div class="cr-val">Page 4</div><div class="cr-lbl">Ranking (from pg 6)</div></div>
+            <div class="cr-item"><div class="cr-val">3x</div><div class="cr-lbl">Faster Indexation</div></div>
+          </div>
+        </div>
+      </div>
+      <!-- Case 2 -->
+      <div class="case-card reveal">
+        <div class="case-head">
+          <div class="case-num">Case Study 02</div>
+          <div class="case-title">Meta Lead Gen — Makeover Artist</div>
+          <div class="case-client">Freelance · Local Beauty Business</div>
+          <div class="case-tags"><span class="case-tag">Meta Ads</span><span class="case-tag">Lead Gen</span><span class="case-tag">Canva</span></div>
+        </div>
+        <div class="case-body">
+          <div class="case-section">
+            <div class="cs-label">The Problem</div>
+            <div class="cs-text">A makeover artist needed a steady pipeline of clients but had zero digital advertising presence and relied entirely on word-of-mouth referrals.</div>
+          </div>
+          <div class="case-section">
+            <div class="cs-label">Strategy</div>
+            <div class="cs-text">Launched 2 targeted Meta lead ads with Canva-designed creatives and persuasive copy, targeting women 18–40 locally with interest-based audience segmentation and a simple lead capture form.</div>
+          </div>
+          <div class="case-results">
+            <div class="cr-item"><div class="cr-val">20</div><div class="cr-lbl">Leads Generated</div></div>
+            <div class="cr-item"><div class="cr-val">2</div><div class="cr-lbl">Ads Launched</div></div>
+          </div>
+        </div>
+      </div>
+      <!-- Case 3 -->
+      <div class="case-card reveal reveal-delay-1">
+        <div class="case-head">
+          <div class="case-num">Case Study 03</div>
+          <div class="case-title">Meta Ads — Thara Farm Tea Powder</div>
+          <div class="case-client">Freelance · FMCG / E-commerce</div>
+          <div class="case-tags"><span class="case-tag">Meta Ads</span><span class="case-tag">E-commerce</span><span class="case-tag">A/B Testing</span></div>
+        </div>
+        <div class="case-body">
+          <div class="case-section">
+            <div class="cs-label">The Problem</div>
+            <div class="cs-text">Thara Farm wanted to grow online sales for their tea powder but had no paid advertising strategy or brand presence on social media platforms.</div>
+          </div>
+          <div class="case-section">
+            <div class="cs-label">Strategy</div>
+            <div class="cs-text">Built a 4-ad Meta campaign with health-conscious and home-buyer audience targeting. A/B tested image vs carousel formats and optimised mid-campaign based on CTR and cost-per-result data.</div>
+          </div>
+          <div class="case-results">
+            <div class="cr-item"><div class="cr-val">38</div><div class="cr-lbl">Total Results</div></div>
+            <div class="cr-item"><div class="cr-val">4</div><div class="cr-lbl">Ads Launched</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CERTIFICATIONS ── -->
+<section id="certifications">
+  <div class="container">
+    <div style="margin-bottom:3rem" class="reveal">
+      <div class="sec-label">Credentials</div>
+      <h2 class="sec-title">Certifications</h2>
+      <p class="sec-sub">Industry-recognised certifications in digital marketing, SEO, and advertising.</p>
+    </div>
+    <div class="cert-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));max-width:640px">
+      <div class="cert-card reveal">
+        <div class="cert-logo hubspot">H</div>
+        <div class="cert-name">HubSpot SEO Certification</div>
+        <div class="cert-issuer">HubSpot Academy</div>
+        <span class="cert-status earned">✓ Certified</span>
+      </div>
+    </div>
+    <p style="font-size:0.85rem;color:var(--text3);margin-top:2rem;line-height:1.7" class="reveal">
+      Looking to add more certifications? Quick wins that complement your profile:
+      <span style="color:var(--text2)">Google Analytics (GA4) · Meta Blueprint · Google Search Console · SEMrush SEO Fundamentals</span> — all free and highly valued by recruiters.
+    </p>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-wrapper">
+      <div class="reveal">
+        <div class="sec-label">Get In Touch</div>
+        <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;letter-spacing:-0.02em;line-height:1.2;margin-bottom:1rem">Let's Build Something<br><span style="color:var(--accent)">Together</span></h2>
+        <p style="color:var(--text2);line-height:1.85;margin-bottom:2rem;font-size:0.975rem">Open to full-time remote and on-site roles anywhere — India or internationally. Also available for freelance and part-time digital marketing work. Whether you need SEO, Meta Ads, content, or a complete digital strategy — let's talk.</p>
+        <div class="contact-links">
+          <a class="c-link" href="mailto:vels7559@gmail.com">
+            <div class="c-icon mail">✉️</div>
+            <div class="c-text"><strong>Email</strong><span>vels7559@gmail.com</span></div>
+          </a>
+          <a class="c-link" href="tel:+916374786895">
+            <div class="c-icon phone">📞</div>
+            <div class="c-text"><strong>Phone / WhatsApp</strong><span>+91 6374786895</span></div>
+          </a>
+          <a class="c-link" href="https://www.linkedin.com/in/sakthivel-k-0910pa13" target="_blank">
+            <div class="c-icon li">💼</div>
+            <div class="c-text"><strong>LinkedIn</strong><span>linkedin.com/in/sakthivel-k-0910pa13</span></div>
+          </a>
+          <div class="c-link" style="cursor:default">
+            <div class="c-icon loc">📍</div>
+            <div class="c-text"><strong>Location</strong><span>Coimbatore, India · Willing to Relocate Anywhere</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form reveal reveal-delay-1">
+        <div class="cf-title">Send a Message</div>
+        <div class="form-row">
+          <div class="fgroup"><label>Your Name</label><input type="text" placeholder="e.g. Priya Sharma"/></div>
+          <div class="fgroup"><label>Email Address</label><input type="email" placeholder="priya@company.com"/></div>
+        </div>
+        <div class="fgroup"><label>Subject / Role</label>
+          <select><option value="">Select a topic...</option><option>Hiring — Full-time Remote Role</option><option>Freelance SEO Project</option><option>Meta Ads Campaign</option><option>Content Marketing Project</option><option>Other Inquiry</option></select>
+        </div>
+        <div class="fgroup"><label>Message</label><textarea placeholder="Tell me about the role or project..."></textarea></div>
+        <button class="form-submit" onclick="handleSubmit(this)">Send Message →</button>
+        <p class="form-note">Typically responds within 24 hours · IST timezone</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-brand">SK<em>.</em> Sakthivel K</div>
+  <div class="footer-copy">© 2026 · Digital Marketing Executive · Open to Work Anywhere</div>
+  <div class="footer-links">
+    <a href="#hero">Back to Top ↑</a>
+    <a href="mailto:vels7559@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/sakthivel-k-0910pa13" target="_blank">LinkedIn</a>
+  </div>
+</footer>
+
+<script>
+function showToast(msg){
+  const t = document.createElement('div');
+  t.textContent = msg;
+  t.style.cssText = 'position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);background:#2ECC8F;color:#fff;padding:0.875rem 1.75rem;border-radius:2rem;font-size:0.875rem;font-weight:700;z-index:9999;box-shadow:0 8px 32px rgba(0,0,0,0.3);max-width:90vw;text-align:center';
+  document.body.appendChild(t);
+  setTimeout(()=>t.remove(), 5000);
+}
+
+function downloadResume(){
+  alert('Replace this with a link to your resume PDF.\nExample: window.location.href = "Sakthivel_K_Resume.pdf"');
+}
+
+function showPanel(id, tab){
+  document.querySelectorAll('.exp-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.exp-tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('panel-'+id).classList.add('active');
+  tab.classList.add('active');
+}
+
+function handleSubmit(btn){
+  btn.textContent = 'Message Sent ✓';
+  btn.style.background = 'var(--green)';
+  setTimeout(()=>{btn.textContent='Send Message →';btn.style.background='var(--accent)'},3500);
+}
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible') });
+},{threshold:0.1, rootMargin:'0px 0px -60px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', e=>{
+    const href = a.getAttribute('href');
+    if(href==='#') return;
+    e.preventDefault();
+    const t = document.querySelector(href);
+    if(t) t.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+});
+
+// Auto-activate first tab on load
+document.addEventListener('DOMContentLoaded', () => {
+  const firstTab = document.querySelector('.exp-tab');
+  const firstPanel = document.querySelector('.exp-panel');
+  if(firstTab && firstPanel){
+    firstTab.classList.add('active');
+    firstPanel.classList.add('active');
+  }
+});
+</script>
+</body>
+</html>
